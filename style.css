@@ -1,3 +1,7 @@
+* 	{
+	font-family: Verdana, Arial, sans-serif;
+	} 
+
 body	{
 	background-color: #36393f;
 	}
@@ -60,18 +64,20 @@ a.light {
 
 .current {
   float: right;
-  color: #ffffffff;
+  //color: #ffffffff;
+  color: white;
   display: block;
-  background-color: red;
+  background-color: #42464d;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 .currentd {
-  color: #111;
+  //color: #111;
+  color: white;
   display: block;
-  background-color: red;
+  background-color: #42464d;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -113,7 +119,7 @@ a.light {
 }
 /*
 .dropdown-content currentd {
-  color: #ffffffff;
+  color: #white;
   padding: 12px 16px;
   background-color: red;
   text-decoration: none;

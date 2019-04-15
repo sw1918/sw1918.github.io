@@ -49,7 +49,7 @@ function reloc() {
     document.getElementById('projd').style.display = 'none';
 
     if (document.getElementById('cv').className == "current") {
-      document.getElementById('btn').style.backgroundColor = "red"; 
+      document.getElementById('btn').style.backgroundColor = "#42464d"; 
     }
     if (document.getElementById('proj').className == "current") {
       document.getElementById('btn').style.backgroundColor = "#36393f"; 
@@ -69,7 +69,7 @@ function reloc() {
     document.getElementById('projd').style.display = 'block';
 
     if (document.getElementById('proj').className == "current") {
-      document.getElementById('btn').style.backgroundColor = "red"; 
+      document.getElementById('btn').style.backgroundColor = "#42464d"; 
     }
     if (document.getElementById('teach').className == "current") {
       document.getElementById('btn').style.backgroundColor = "#36393f"; 
@@ -88,7 +88,7 @@ function reloc() {
     document.getElementById('projd').style.display = 'block';
 
     if (document.getElementById('teach').className == "current") {
-      document.getElementById('btn').style.backgroundColor = "red"; 
+      document.getElementById('btn').style.backgroundColor = "#42464d"; 
     }
     if (document.getElementById('home').className == "current") {
       document.getElementById('btn').style.backgroundColor = "#36393f"; 
@@ -107,7 +107,7 @@ function reloc() {
     document.getElementById('projd').style.display = 'block';
 
     if (document.getElementById('home').className == "current") {
-      document.getElementById('btn').style.backgroundColor = "red"; 
+      document.getElementById('btn').style.backgroundColor = "#42464d"; 
     }
   }
 
