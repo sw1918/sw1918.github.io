@@ -171,32 +171,31 @@ p	{
   max-width: 800px;
 }
 
-p.c	{
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto;  
-}
-
-.hero-image {
-  position: relative;
-  background-image: url("vancouver.jpg"); /* The image used */
-  background-color: #cccccc; /* Used if the image is unavailable */
-  height: 400px; /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-}
-
-.hero-image-thin {
-  position: relative;
-  background-image: url("vancouver.jpg"); /* The image used */
-  background-color: #cccccc; /* Used if the image is unavailable */
-  height: 240px; /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-}
-
 .ban	{
   position: relative;
+}
+
+.image-box	{
+  padding: 5px;
+  max-width: 1200px;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  color: #dcdcdc;
+  font-size: large;
+}
+
+img.wrapped	{
+  width: 400px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+img.center	{
+  display: block;
+  width: 500px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
 }
