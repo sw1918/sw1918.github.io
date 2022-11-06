@@ -128,7 +128,6 @@ a.light {
 
 .current {
   float: right;
-  //color: #ffffffff;
   color: white;
   display: block;
   background-color: #42464d;
@@ -138,7 +137,6 @@ a.light {
 }
 
 .currentd {
-  //color: #111;
   color: white;
   display: block;
   background-color: #42464d;
@@ -158,7 +156,6 @@ a.light {
 .dropdown {
   float: right;
   position: relative;
-  //display: inline-block;
   display: block;
   margin: 0px;
 }
@@ -315,7 +312,7 @@ img.center	{
 
 img.center2	{
   display: block;
-  width: 30x
+  width: 30x;
   height: 50x;
   margin-left: auto;
   margin-right: auto;
