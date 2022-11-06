@@ -33,8 +33,30 @@ ul.drop {
   background-color: #36393f;
 }
 
-table.proj{
-  
+table.blog {
+  border-collapse: collapse;
+}
+
+table.blog td, table.blog th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table.blog th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #240053;
+  color: white;
+}
+
+table.blog tr{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  text-align: left;
+  background-color: white;
+  color: black;
 }
 
 ul.norm {
