@@ -1,32 +1,19 @@
 <HTML>
 <Head>
 <link rel="stylesheet" type="text/css" href="style.css">
+<script src="jquery.js"></script> 
+<script> 
+  $(function(){
+    $("#navbar").load("navbar.html"); 
+  });
+  </script> 
 </HEAD>
 <Body>
 
-<div id = "drop" class="dropdown">
-  <button id = "btn" class="dropbtn">...</button>
-  <div class="dropdown-content">
-    <a id ="cvd" href="cv.html">Curriculum Vitae</a>
-    <a id ="pubsd" href="pubs.html">Publications</a>
-    <div id ="teachd" class = "currentd">Teaching</div>
-    <a id ="projd" href="projects.html">About Me</a>
-    <a id ="homed" href="index.html">Homepage</a>
-  </div>
-</div>
-
-<ul class = "drop" id = "bar">
-<li class = "drop"> <a id ="cv" href="cv.html">Curriculum Vitae</a> </li>
-<li class = "drop"> <a id ="pubs" href="pubs.html">Publications</a> </li>
-<li class = "drop"> <div id ="teach" class="current">Teaching</div> </li>
-<li class = "drop"> <a id ="proj" href="projects.html">About Me</a> </li>
-<li class = "drop"> <a id ="home" href="index.html">Homepage</a> </li>
-<li> <div id ="name" class="sp">Spencer Williams</div> </li>
-</ul>
+<div id="navbar"></div>
 
 <hr>
-
-<div class="center">
+<h2>What I teach</h2>
 
 <p>In my role as an Assistant Teaching Professor, I primarily teach core courses related to HCI topics like design, social media, cognition, and ethics. In the 23-24 AY,
   I'm teaching INFO 103, INFO 356, INFO 360, and INFO 463. </p>
@@ -45,7 +32,5 @@
 <p>
 <a href="syllabi/INFO 360 Syllabus Fall 2023 Sample.pdf" class = "light" target="_blank">INFO 360: Design Methods</a>
 </p>
-
-<script src="webscript.js"></script>
 
 </Body>

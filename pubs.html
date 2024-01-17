@@ -1,37 +1,28 @@
 <HTML>
 <Head>
 <link rel="stylesheet" type="text/css" href="style.css">
+<script src="jquery.js"></script> 
+<script> 
+  $(function(){
+    $("#navbar").load("navbar.html"); 
+  });
+  </script> 
 </HEAD>
 <Body>
 
-<div id = "drop" class="dropdown">
-  <button id = "btn" class="dropbtn">...</button>
-  <div class="dropdown-content">
-    <a id ="cvd" href="cv.html">Curriculum Vitae</a>
-    <div id ="pubsd" class="currentd">Publications</div>
-    <a id ="teachd" href="teaching.html">Teaching</a>
-    <a id ="projd" href="projects.html">About Me</a>
-    <a id ="homed" href="index.html">Homepage</a>
-  </div>
-</div>
-
-<ul class = "drop" id = "bar">
-<li class = "drop"> <a id ="cv" href="cv.html">Curriculum Vitae</a> </li>
-<li class = "drop"> <div id ="pubs" class="current">Publications</div> </li>
-<li class = "drop"> <a id ="teach" href="teaching.html">Teaching</a> </li>
-<li class = "drop"> <a id ="proj" href="projects.html">About Me</a> </li>
-<li class = "drop"> <a id ="home" href="index.html">Homepage</a> </li>
-<li> <div id ="name" class="sp">Spencer Williams</div> </li>
-</ul>
+<div id="navbar"></div>
 
 <hr>
-
-<div class="center">
 
 <h2>Conference and Journal Papers</h2>
 <h3>(Fully reviewed)</h3>
 
 <hr>
+
+<p><a href = "pubs/zade-css2023-reply.pdf" class="light">
+  To Reply or to Quote: Comparing Conversational Framing Strategies on Twitter</a>
+  Zade, H., <b>Williams, S.</b>, Tran, T., Smith, C., Venkatagiri, S., Hsieh, G., Starbird, K. (2023). ACM COMPASS.
+  </p>
 
 <p><a href = "pubs/rosen-health2023-communication.pdf" class="light">
   Association between Risk Communication Format and Perceived Risk of Adverse Events after COVID-19 Vaccination mong US Adults</a>
@@ -75,7 +66,5 @@
 <p>A Parallel Journeys Perspective on Technology-Supported Depression Care for Patients with Cancer. Suh, J., <b>Williams, S.</b>, Fann, J.R., Fogarty, J., Bauer, A.M., and Hsieh, G. CHI 2020, Workshop on Technology Ecosystems & Mental Health.</p> 
 
 <p>Information Needs of Streamers. Mallari, K., <b>Williams, S.</b>, and Hsieh, G. CHI 2020, Workshop on Spectator Experience in Gaming and eSports.</p> 
-
-<script src="webscript.js"></script>
 
 </Body>

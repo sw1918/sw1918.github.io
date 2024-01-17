@@ -5,38 +5,29 @@
 <meta charset="UTF-8">
 <meta name="Personal Website" content="This is a personal website for Spencer Williams.">
 <link rel="stylesheet" type="text/css" href="style.css">
+<script src="jquery.js"></script> 
+<script> 
+  $(function(){
+    $("#navbar").load("navbar.html"); 
+  });
+  </script> 
 </Head>
 
 <Body>
 
-
-<div id = "drop" class="dropdown">
-  <button id = "btn" class="dropbtn">...</button>
-  <div class="dropdown-content">
-    <a id ="cvd" href="cv.html">Curriculum Vitae</a>
-    <a id ="pubsd" href="pubs.html">Publications</a>
-    <a id ="teachd" href="teaching.html">Teaching</a>
-    <a id ="projd" href="projects.html">About Me</a>
-    <div id ="homed" class="currentd">Homepage</div>
-  </div>
-</div>
-
-<ul class = "drop" id = "bar">
-<li class = "drop"> <a id ="cv" href="cv.html">Curriculum Vitae</a> </li>
-<li class = "drop"> <a id ="pubs" href="pubs.html">Publications</a> </li>
-<li class = "drop"> <a id ="teach" href="teaching.html">Teaching</a> </li>
-<li class = "drop"> <a id ="proj" href="projects.html">About Me</a> </li>
-<li class = "drop"> <div id ="home" class="current">Homepage</div> </li>
-<li> <div id ="name" class="sp">Spencer Williams</div> </li>
-</ul>
+<div id="navbar"></div>
 
 <hr>
 
-<img class = "center2" src="ischool_headshot.jpg", width="500px" alt="Me">
+<img class = "center2" src="ischool_headshot.jpg", width="500px" alt="Me"></img>
 
 <h4>
 <a href="mailto:sw1918@uw.edu" class = "light"> sw1918@uw.edu </a>
 </h4>
+
+<h4>
+  <a href="CV.pdf" target = "_blank" class = "light"> CV </a>
+  </h4>
 
 <p>Hi! I am an Assistant Teaching Professor at the University of Washington iSchool. 
   I study how researchers can better engage with the public online, how science is discussed on social media, and how to 
@@ -129,8 +120,6 @@
 </div>
 
 <br>
-
-<script src="webscript.js"></script>
 
 
 </Body> 
