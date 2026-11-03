@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  items: CollectionEntry<'projects'>[];
+}
+const { items } = Astro.props;
+---
+
+{items.length === 0 ? (
+  <p class="muted">Nothing here yet.</p>
+) : (
+  <div class="cards">
+    {items.map((p) => (
+      <a class={`card card--${p.data.kind}`} href={`/projects/${p.id}`}>
+        {p.data.cover ? (
+          <Image src={p.data.cover} alt="" widths={[430, 920]} sizes="(min-width: 640px) 22rem, 100vw" />
+        ) : (
+          <div class="placeholder" />
+        )}
+        <div class="card-body">
+          {p.data.status && <div class="status">{p.data.status}</div>}
+          <h3>{p.data.title}</h3>
+          <p>{p.data.summary}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+)}

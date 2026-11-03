@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
+import { getProjects } from '../lib/content';
+
+const items = await getProjects('game');
+---
+
+<Base title="Games" description="Games I've made.">
+  <h1>Games</h1>
+  <p class="lede">I sometimes make games. Check them out!</p>
+  <ProjectGrid items={items} />
+</Base>

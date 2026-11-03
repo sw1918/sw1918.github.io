@@ -1,0 +1,34 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { site } from '../site.config';
+
+interface Props {
+  pubs: CollectionEntry<'publications'>[];
+}
+const { pubs } = Astro.props;
+---
+
+<ol class="pubs">
+  {pubs.map(({ data }) => (
+    <li class="pub" data-type={data.type}>
+      <div class="pub-title">
+        {data.title}
+        {data.award && <span class="award">{data.award}</span>}
+      </div>
+      <div class="pub-authors">
+        {data.authors.map((a, i) => (
+          <>
+            {a === site.authorName ? <span class="me">{a}</span> : <span>{a}</span>}
+            {i < data.authors.length - 1 && ', '}
+          </>
+        ))}
+      </div>
+      <div class="pub-venue">{data.venue}</div>
+      {data.links.length > 0 && (
+        <div class="pub-links">
+          {data.links.map((l) => <a href={l.href}>{l.label}</a>)}
+        </div>
+      )}
+    </li>
+  ))}
+</ol>

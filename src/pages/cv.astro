@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+import PubList from '../components/PubList.astro';
+import { site } from '../site.config';
+import { getPubs } from '../lib/content';
+
+const pubs = await getPubs();
+---
+
+<Base title="CV" description={`Curriculum vitae of ${site.name}.`}>
+  <h1>Curriculum Vitae</h1>
+  <!-- Put your PDF at public/cv.pdf -->
+  <p class="lede"><a href="https://docs.google.com/document/d/1g6HquZTGq8q39JJJ1QqX7DZnJWN0mJ8UNVqOS6riZ6M/edit?usp=drive_link" target="_blank">Full CV</a></p>
+
+  <h2>Appointments</h2>
+  <p><strong>{site.title}</strong>, {site.affiliation} <span class="muted">· 2023-present</span></p>
+  <p><strong>UX Research Intern</strong>, Meta Platforms, Inc. <span class="muted">· 2022</span></p>
+  <p><strong>Content Design Contractor</strong>, Microsoft Corporation <span class="muted">· 2021</span></p>
+
+  <h2>Education</h2>
+  <p><strong>Ph.D., Human-Centered Design & Engineering</strong>, University of Washington <span class="muted">· 2018-2023</span></p>
+  <p><strong>M.S., Human-Centered Design & Engineering</strong>, University of Washington <span class="muted">· 2018-2022</span></p>
+  <p><strong>B.A. Honours, Psychology</strong>, University of British Columbia <span class="muted">· 2013-2017</span></p>
+  <p><strong>D.T.A., Associates in Arts & Sciences </strong>, Whatcom Community College <span class="muted">· 2011-2013</span></p>
+
+  <h2>Publications</h2>
+  <!-- Pulled from the same files as the Research page, so this never drifts. -->
+  <PubList pubs={pubs} />
+
+  <h2>Teaching</h2>
+  <p>See <a href="/teaching">Teaching</a>.</p>
+
+  <h2>Service</h2>
+  <ul>
+    <li>Program committee, [venue, year]</li>
+    <li>Reviewer: CHI, CSCW</li>
+  </ul>
+</Base>

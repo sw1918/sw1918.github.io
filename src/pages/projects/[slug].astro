@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets';
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { getProjects, fmtDate } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const items = await getProjects();
+  return items.map((p) => ({ params: { slug: p.id }, props: { p } }));
+}
+
+const { p } = Astro.props;
+const { Content } = await render(p);
+const back = { game: ['/games', 'Games'], music: ['/music', 'Music'], other: ['/', 'Home'] }[p.data.kind];
+---
+
+<Base title={p.data.title} description={p.data.summary} image={p.data.cover?.src}>
+  <article>
+    <p class="small"><a href={back[0]}>← {back[1]}</a></p>
+    {p.data.status && <div class="status">{p.data.status}</div>}
+    <h1>{p.data.title}</h1>
+    <p class="lede">{p.data.summary}</p>
+
+    {p.data.links.length > 0 && (
+      <ul class="inline-links">
+        {p.data.links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+      </ul>
+    )}
+
+    {p.data.steamAppId && (
+      <div class="embed">
+        <iframe
+          src={`https://store.steampowered.com/widget/${p.data.steamAppId}/`}
+          height="190"
+          loading="lazy"
+          title={`${p.data.title} on Steam`}
+        />
+      </div>
+    )}
+
+    {p.data.embed && (
+      <div class="embed">
+        <iframe src={p.data.embed} height="380" loading="lazy" allowfullscreen title={p.data.title} />
+      </div>
+    )}
+
+    {p.data.cover && !p.data.embed && (
+      <Image src={p.data.cover} alt="" widths={[800, 1400]} sizes="(min-width: 760px) 44rem, 100vw" />
+    )}
+
+    <div class="prose">
+      <Content />
+    </div>
+    <p class="small muted">{fmtDate(p.data.date, { year: 'numeric', month: 'long' })}</p>
+  </article>
+</Base>

@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro';
+import PubList from '../components/PubList.astro';
+import { getPubs } from '../lib/content';
+
+const pubs = await getPubs();
+const years = [...new Set(pubs.map((p) => p.data.year))];
+const types = [...new Set(pubs.map((p) => p.data.type))];
+const label: Record<string, string> = {
+  conference: 'Conference', journal: 'Journal', workshop: 'Workshop',
+  poster: 'Poster', preprint: 'Preprint', other: 'Other',
+};
+---
+
+<Base title="Research" description="Research areas and publications.">
+  <h1>Research</h1>
+  <!-- Replace with a short overview of your research themes. -->
+  <p class="lede">I use a mixed-methods approach to study and develop technology that connects research knowledge with non-researchers.
+    This involves helping researchers communicate their work, and helping non-researchers engage with scientific institutions in various ways.</p>
+
+  <h2>Publications</h2>
+
+  {types.length > 1 && (
+    <div class="filters" role="group" aria-label="Filter by type">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      {types.map((t) => <button type="button" data-filter={t} aria-pressed="false">{label[t]}</button>)}
+    </div>
+  )}
+
+  {years.map((year) => (
+    <section class="year" data-year={year}>
+      <h3>{year}</h3>
+      <PubList pubs={pubs.filter((p) => p.data.year === year)} />
+    </section>
+  ))}
+</Base>
+
+<script>
+  // Small progressive enhancement: everything is visible without JS.
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.filters button');
+  buttons.forEach((btn) =>
+    btn.addEventListener('click', () => {
+      const f = btn.dataset.filter!;
+      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+      document.querySelectorAll<HTMLElement>('.pub').forEach((el) => {
+        el.hidden = f !== 'all' && el.dataset.type !== f;
+      });
+      document.querySelectorAll<HTMLElement>('.year').forEach((sec) => {
+        sec.hidden = !sec.querySelector('.pub:not([hidden])');
+      });
+    })
+  );
+</script>

@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getPosts, fmtDate } from '../../lib/content';
+
+const posts = await getPosts();
+---
+
+<Base title="Blog" description="Writing on research, teaching, games, and whatever else.">
+  <h1>Blog</h1>
+  <p class="lede">Stray thoughts on research, teaching, art, etc. <a href="/rss.xml">RSS</a></p>
+
+  <ul class="post-list">
+    {posts.map((p) => (
+      <li>
+        <a href={`/blog/${p.id}`}>{p.data.title}</a>
+        <div class="post-meta">
+          {fmtDate(p.data.date)}
+          {p.data.tags.length > 0 && ' · '}
+          <span class="tags">
+            {p.data.tags.map((t) => <a class="tag" href={`/blog/tags/${t}`}>#{t}</a>)}
+          </span>
+        </div>
+        <div class="small">{p.data.description}</div>
+      </li>
+    ))}
+  </ul>
+</Base>

@@ -1,0 +1,31 @@
+# Courses render in this order. Fill in codes, terms and descriptions.
+- id: design-methods
+  title: Design Methods (INFO 360)
+  terms: [Fall 26, Fall 26, Fall 25, Spring 25, Winter 25, Winter 25, Fall 24, Spring 24, Fall 23]
+  description: Introduction to design methods, including problem definition, ideation, prototyping, evaluation, collaboration, and communication.
+- id: research-methods
+  title: Research Methods (INFO 300)
+  terms: [Summer 26, Summer 25, Winter 25]
+  description: Introduction to research methods, including question development, literature review, data collection, analysis, reporting, and ethics.
+- id: input-interaction
+  title: Input and Interaction (INFO 463)
+  terms: [Spring 25, Spring 24]
+  description: Describes how to use models of human motor function and cognition to design technology.
+- id: social-media-bots
+  title: Social Media, Ethics, and Automation (INFO 103)
+  terms: [Winter 26, Fall 24, Winter 24, Fall 23]
+  description: Programming course focused on development of social media bots. Includes discussion of social media and ethical topics.
+- id: moral-interaction
+  title: Moral Reasoning and Interaction Design (INFO 356)
+  terms: [Spring 26, Winter 24]
+  description: Survey and discussion of ethical philosophy tied to the design of technology. Seminar and studio components.
+- id: info-capstone
+  title: Informatics Capstone (INFO 490/491)
+  terms: [Spring 26, Winter 26]
+  description: Capstone course for informatics majors. Students design, test, and deploy information systems to complete self-directed or sponsored projects.
+- id: experimental-methods
+  title: Experimental Research Methods (HCDE 516)
+  terms: [Winter 23, Fall 22]
+  description: Introduction to experimental methods for masters students. Covers common experimental designs, moderators and mediators, t-tests, ANOVA, and regression.
+  
+  

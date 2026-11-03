@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const courses = await getCollection('courses');
+---
+
+<Base title="Teaching" description="Courses I teach.">
+  <h1>Teaching</h1>
+  <!-- Optional: a sentence or two on your teaching approach. -->
+  <p class="lede">My goal as a teacher is to inspire and prepare the next generation of competent, ethical technologists. </p>
+
+  {courses.map(({ data }) => (
+    <div class="course">
+      <h3>
+        {data.code && <span class="muted">{data.code} · </span>}
+        {data.url ? <a href={data.url}>{data.title}</a> : data.title}
+      </h3>
+      {data.terms.length > 0 && <div class="small muted">{data.terms.join(', ')}</div>}
+      <p>{data.description}</p>
+    </div>
+  ))}
+</Base>
