@@ -8,7 +8,7 @@ cover: ./heronet_ost.png
 # Bandcamp, SoundCloud, or YouTube embed URL (the iframe "src", not the page URL)
 embed: "https://www.youtube.com/embed/bH6QpZ_VnpE?si=NjPw0_YnOZE_9yqv"
 links:
-  - { label: Bandcamp, href: "https://www.youtube.com/watch?v=bH6QpZ_VnpE" }
+  - { label: Bandcamp, href: "https://spencerzhaowilliams.bandcamp.com/album/heronet-official-soundtrack" }
 ---
 
 The soundtrack I wrote for my game, HeroNet. For whatever reason, it took me forever to figure out the right vibe for this game; my FL Studio projects
