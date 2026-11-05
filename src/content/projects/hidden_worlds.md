@@ -7,6 +7,7 @@ status: LP
 cover: ./hidden_worlds.png
 # Bandcamp, SoundCloud, or YouTube embed URL (the iframe "src", not the page URL)
 embed: "https://bandcamp.com/EmbeddedPlayer/album=2488432307/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+embedHeight: 120
 links:
   - { label: Bandcamp, href: "https://spencerzhaowilliams.bandcamp.com/album/hidden-worlds" }
 ---

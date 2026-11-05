@@ -7,11 +7,12 @@ status: LP
 cover: ./heronet_ost.png
 # Bandcamp, SoundCloud, or YouTube embed URL (the iframe "src", not the page URL)
 embed: "https://www.youtube.com/embed/bH6QpZ_VnpE?si=NjPw0_YnOZE_9yqv"
+embedHeight: 380
 links:
   - { label: Bandcamp, href: "https://spencerzhaowilliams.bandcamp.com/album/heronet-official-soundtrack" }
 ---
 
-The soundtrack I wrote for my game, HeroNet. For whatever reason, it took me forever to figure out the right vibe for this game; my FL Studio projects
+The soundtrack I wrote for my game, [HeroNet](/projects/heronet). For whatever reason, it took me forever to figure out the right vibe for this game; my FL Studio projects
 folder is full of discarded 1-minute drafts. I think they started too ambient, like something you'd hear in an RTS, but they weren't right for the cartoony-corporate
 vibe I was going for here. Bunnies Making Decisions was the first track I finally finished, and everything eventually flowed from there. 
 

@@ -7,6 +7,7 @@ status: LP
 cover: ./trick_or_treat_beats.png
 # Bandcamp, SoundCloud, or YouTube embed URL (the iframe "src", not the page URL)
 embed: "https://bandcamp.com/EmbeddedPlayer/album=4014558353/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+embedHeight: 120
 links:
   - { label: Bandcamp, href: "https://spencerzhaowilliams.bandcamp.com/album/trick-or-treat-beats" }
 ---

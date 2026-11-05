@@ -40,7 +40,7 @@ const back = { game: ['/games', 'Games'], music: ['/music', 'Music'], other: ['/
 
     {p.data.embed && (
       <div class="embed">
-        <iframe src={p.data.embed} height="380" loading="lazy" allowfullscreen title={p.data.title} />
+        <iframe src={p.data.embed} height={p.data.embedHeight} loading="lazy" allowfullscreen title={p.data.title} />
       </div>
     )}
 

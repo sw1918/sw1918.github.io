@@ -23,4 +23,4 @@ roguelike, where you progress through different contracts, hiring heroes, buying
 random requests from clients each battle.
 
 The game includes 6 story-based contracts, 6 endless contracts, and an arcade mode, as well as over 100 
-characters and nearly 3 hours of original music.  
+characters and [nearly 3 hours of original music](/projects/heronet_ost).  

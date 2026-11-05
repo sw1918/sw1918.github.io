@@ -44,6 +44,7 @@ const projects = defineCollection({
       status: z.string().optional(), // e.g. "Released", "In development"
       steamAppId: z.string().optional(), // renders the Steam store widget
       embed: z.string().optional(), // any iframe src: Bandcamp, SoundCloud, YouTube, itch.io
+      embedHeight: z.number().optional(),
       links: z.array(link).default([]),
       order: z.number().default(0), // higher shows first
     }),
